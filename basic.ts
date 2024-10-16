@@ -1201,7 +1201,7 @@ namespace PlanetX_Basic {
     export function dht11Sensor(Rjpin: DigitalRJPin, dht11state: DHT11_state): number {
         let temp = 0;
         i2cCommandSend(0xA0, [0x2]); 
-        temp = pins.i2cReadNumber(0x1a, NumberFormat.UInt16LE, false);
+        temp = pins.i2cReadNumber(cutebotProAddr, NumberFormat.UInt16LE, false);
         return temp;
     }
 
